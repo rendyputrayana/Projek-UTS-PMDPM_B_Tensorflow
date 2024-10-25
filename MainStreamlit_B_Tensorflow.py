@@ -83,7 +83,7 @@ elif selected == 'Regresi':
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
 
-    st.title('Klasifikasi')
+    st.title('Regresi')
     st.write('Masukkan Input-input berikut ini')
     luas = st.slider('Luas', 0, 99999)
     jumlah_ruangan = st.slider('Jumlah Ruangan', 0, 100)
@@ -143,7 +143,7 @@ elif selected == 'Regresi':
 
     if st.button('Prediksi'):
         model = model.predict(input_data)
-        st.write('Kategori yang diprediksi adalah', model)
+        st.write('Harga yang diprediksi adalah', model)
 
         
 
