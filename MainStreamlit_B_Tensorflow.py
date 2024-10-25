@@ -9,10 +9,9 @@ with st.sidebar:
                            ['Klasifikasi','Regresi'],default_index=0)
     
 if selected == 'Klasifikasi':
-    model_path = r'E:\Rendy\Kampus\Semester 5\MLDL\UTS'
-    model = os.path.join(model_path,'BestModel_CLF_GBT_Tensorflow.pkl')
+    model_path = r'BestModel_CLF_GBT_Tensorflow.pkl'
 
-    with open(model, 'rb') as file:
+    with open(model_path, 'rb') as file:
         model = pickle.load(file)
 
     st.title('Klasifikasi')
@@ -79,8 +78,7 @@ if selected == 'Klasifikasi':
 
 elif selected == 'Regresi':
 
-    model_path = r'E:\Rendy\Kampus\Semester 5\MLDL\UTS'
-    model = os.path.join(model_path,'BestModel_REG_Lasso_Tensorflow.pkl')
+    model_path = r'BestModel_REG_Lasso_Tensorflow.pkl'
 
     with open(model, 'rb') as file:
         model = pickle.load(file)
