@@ -80,7 +80,7 @@ elif selected == 'Regresi':
 
     model_path = r'BestModel_REG_Lasso_Tensorflow.pkl'
 
-    with open(model, 'rb') as file:
+    with open(model_path, 'rb') as file:
         model = pickle.load(file)
 
     st.title('Klasifikasi')
